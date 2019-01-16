@@ -11,7 +11,9 @@
   
 ## 프로젝트 초기 셋팅
 * github 프로젝트를 사용하는 경우 node_modules는 ignore이므로 아래 명령어를 수행하여 모듈을 사용할 수 있도록 한다.
-	- github step3_jwt_destroy_complete branch 받기  
+	- github branch 받은 후 step3_jwt_destroy_complete branch로 전환하기  
+	- (Terminal)> git clone https://github.com/bogurs/nodejs_jwt_sample.git  
+	- (Terminal)> git checkout -b step3_jwt_destroy_complete origin/step3_jwt_destroy_complete  
 	- (Terminal)> npm i body-parser morgam express express-session jsonwebtoken  
 * nodejs를 잘 모르기에 사용한 모든 명령어를 적도록 한다.  
 	- (Terminal)> npm init  
