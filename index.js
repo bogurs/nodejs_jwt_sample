@@ -46,3 +46,7 @@ app.post('/api/encode', async function(req, res) {
     req.session[token] = true;
     res.json(token); // return token to client
 });
+
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!');
+});
