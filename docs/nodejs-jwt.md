@@ -35,11 +35,13 @@ app.use(session({
     secret: 'mysessionsign',
     resave: false,
     saveUninitialized: true
-}));~~~
+}));
+~~~
   
 * config.js  
 
 ~~~module.exports = {
     'secret': 'SeCrEtKeYfOrHaShInG',
-}~~~
+}
+~~~
   
