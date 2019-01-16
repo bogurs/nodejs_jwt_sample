@@ -47,6 +47,28 @@ app.post('/api/encode', async function(req, res) {
     res.json(token); // return token to client
 });
 
+// destroy json web token (null error handle)
+app.get('/api/decode', function(req, res) {
+    console.log('have to call /api/decode/${TOKEN}!!!');
+    res.status(404).end(); // token is null
+});
+
+// decode json web token
+app.get('/api/decode/:token', async function(req, res) {
+    console.log('call /api/decode!!!');
+    let token = req.params.token;
+    if (!req.session[token]) { // if session's token is null
+        return res.status(400).end();
+    }
+
+    let rawDataPromise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve(jwt.decode(token)))
+    });
+    let rawData = await rawDataPromise;
+
+    res.json(rawData);
+});
+
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
 });
