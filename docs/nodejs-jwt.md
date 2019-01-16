@@ -47,3 +47,6 @@ module.exports = {
 }
 ~~~
   
+
+## 서버 실행하기
+* node index.js  
