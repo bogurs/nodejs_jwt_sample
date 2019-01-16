@@ -69,6 +69,24 @@ app.get('/api/decode/:token', async function(req, res) {
     res.json(rawData);
 });
 
+// destroy json web token (null error handle)
+app.delete('/api/destroy', function(req, res) {
+    console.log('have to call /api/destroy/${TOKEN}!!!');
+    res.status(404).end(); // token is null
+});
+
+// destroy json web token
+app.delete('/api/destroy/:token', function(req, res) {
+    console.log('call /api/destroy!!!');
+    let token = req.params.token;
+    if (!req.session[token]) { // if session's token is null
+        return res.status(400).end();
+    }
+
+    delete req.session[token];
+    res.end();
+});
+
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
 });
