@@ -35,13 +35,19 @@ app.post('/api/encode', async function(req, res) {
   
 ## 서버 실행하여 Postman으로 검증해보기
 * (Terminal)> node index.js  
+* 성공 시나리오
     1. POST localhost:3000/api/encode 으로 설정한 후 body>raw>JSON(application/json)으로 진입하여 아래와 같이 데이터 작성  
     2. 
     ~~~
     {
-        number: 777
+        "number": 777
     }
     ~~~
     3. Send  
     4. Return한 Body에 Encoded된 JWT데이터 확인  
+  
+* 실패 시나리오
+    1. 성공 시나리오에서 2.부분의 JSON 데이터를 공란으로 셋팅  
+    2. Send  
+    3. 404 Not Found Error Return 확인  
   
