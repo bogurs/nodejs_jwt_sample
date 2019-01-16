@@ -19,7 +19,8 @@
   
 * index.js  
 
-~~~var express = require('express');
+~~~
+var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
@@ -40,7 +41,8 @@ app.use(session({
   
 * config.js  
 
-~~~module.exports = {
+~~~
+module.exports = {
     'secret': 'SeCrEtKeYfOrHaShInG',
 }
 ~~~
