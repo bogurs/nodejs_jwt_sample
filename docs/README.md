@@ -7,7 +7,7 @@
   
   
 ## 참고한 URL
-* [1. 프로젝트 초기 셋팅]: 인프런에서 수강한 NodeJS 강좌 내용을 참고 하였습니다. (김정환 강사님)  
-* [JsonWebToken]: velopert(https://velopert.com/2448)  
-* [express-session]: velopert(https://velopert.com/406)  
-* [async/await]: PROIN's blog(https://proinlab.com/archives/2138)  
+    * [1. 프로젝트 초기 셋팅]: 인프런에서 수강한 NodeJS 강좌 내용을 참고 하였습니다.(김정환 강사님)
+    * [JsonWebToken]: velopert(https://velopert.com/2448)
+    * [express-session]: velopert(https://velopert.com/406)
+    * [async/await]: PROIN's blog(https://proinlab.com/archives/2138)
